@@ -11,4 +11,10 @@ docker container run -p 8080:8080 leolm-simple-server:v1
 ```
 
 # DOCKER COMPOSE PATH
+build the image and then run the following command:
+```
+docker-compose up -d
+```
 
+# ENV VARS
+this project uses and needs the variables defined in the example.env do run
