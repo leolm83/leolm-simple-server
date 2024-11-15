@@ -7,3 +7,7 @@ docker-compose up -d
 
 # ENV VARS
 this project uses and needs the variables defined in the example.env do run
+
+
+# FAQ
+this project only works with docker compose(and not with the legacy docker-compose cli tool)

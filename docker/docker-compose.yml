@@ -1,4 +1,4 @@
-version: '3.9'
+name: leolm_simple_server
 services:
   app1:
     image: leolm-simple-server:v2
