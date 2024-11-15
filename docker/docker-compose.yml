@@ -1,7 +1,10 @@
 version: '3.9'
 services:
   app1:
-    image: leolm-simple-server:v1
+    image: leolm-simple-server:v2
+    build: 
+      context: ../
+      dockerfile: ./docker/Dockerfile    
     environment:
       - APP_NAME=APP1
     ports:
@@ -9,7 +12,10 @@ services:
     networks:
       - appsNetwork
   app2:
-    image: leolm-simple-server:v1
+    image: leolm-simple-server:v2
+    build: 
+      context: ../
+      dockerfile: ./docker/Dockerfile  
     environment:
       - APP_NAME=APP2
     ports:
@@ -17,7 +23,10 @@ services:
     networks:
       - appsNetwork
   app3:
-    image: leolm-simple-server:v1
+    image: leolm-simple-server:v2
+    build: 
+      context: ../
+      dockerfile: ./docker/Dockerfile
     environment:
       - APP_NAME=APP3
     ports:
