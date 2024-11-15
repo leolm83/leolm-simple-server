@@ -6,7 +6,7 @@ docker-compose up -d
 ```
 
 # ENV VARS
-this project uses and needs the variables defined in the example.env do run
+this project uses and needs the variables defined in the example.env to run
 
 
 # FAQ
