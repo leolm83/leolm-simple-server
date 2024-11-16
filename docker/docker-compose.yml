@@ -1,7 +1,7 @@
 name: leolm_simple_server
 services:
   app1:
-    image: leolm-simple-server:v2
+    image: leolm-simple-server:v3
     build: 
       context: ../
       dockerfile: ./docker/Dockerfile    
@@ -12,7 +12,7 @@ services:
     networks:
       - appsNetwork
   app2:
-    image: leolm-simple-server:v2
+    image: leolm-simple-server:v3
     build: 
       context: ../
       dockerfile: ./docker/Dockerfile  
@@ -23,7 +23,7 @@ services:
     networks:
       - appsNetwork
   app3:
-    image: leolm-simple-server:v2
+    image: leolm-simple-server:v3
     build: 
       context: ../
       dockerfile: ./docker/Dockerfile
@@ -38,6 +38,12 @@ services:
     volumes:
       - ./data/nginx.conf:/etc/nginx/nginx.conf  
     ports:
-      - 9090:80
+      - 8085:8085
+    networks:
+      - appsNetwork
+    depends_on:
+      - app1
+      - app2
+      - app3
 networks:
   appsNetwork: {}
